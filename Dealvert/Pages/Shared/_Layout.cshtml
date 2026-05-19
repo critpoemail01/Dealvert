@@ -33,12 +33,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="~/assets/brand/dealvert_favicon_32.png" asp-append-version="true" />
     <link rel="apple-touch-icon" sizes="512x512" href="~/assets/brand/dealvert_icon_512_clean.png" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/vert-template.css" asp-append-version="true" />
     <meta name="csrf-token" content="@tokens.RequestToken" />
 </head>
-<body>
-<header class="public-site-header">
-    <nav class="navbar navbar-expand-lg dealvert-nav public-workspace-nav">
-        <div class="container public-nav-container">
+<body class="vert-public-page">
+<header class="public-site-header vert-public-header">
+    <nav class="navbar navbar-expand-lg dealvert-nav public-workspace-nav vert-public-nav">
+        <div class="container-fluid public-nav-container vert-public-nav-inner">
             <a class="navbar-brand brand-lockup" asp-page="/Index" aria-label="Dealvert home">
                 <span class="brand-mark">
                     <img src="~/assets/brand/dealvert_brand_mark.svg" width="42" height="42" asp-append-version="true" alt="" />
@@ -55,7 +56,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="nav">
-                <ul class="navbar-nav public-nav-links me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav public-nav-links vert-public-nav-links me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link @(pricingActive ? "active" : "")" asp-page="/Pricing" aria-current="@(pricingActive ? "page" : null)"><i class="bi bi-credit-card-2-front"></i><span>Plans</span></a></li>
                     <li class="nav-item"><a class="nav-link @(howItWorksActive ? "active" : "")" asp-page="/HowItWorks" aria-current="@(howItWorksActive ? "page" : null)"><i class="bi bi-diagram-3"></i><span>How it works</span></a></li>
                     <li class="nav-item"><a class="nav-link @(aboutActive ? "active" : "")" asp-page="/About" aria-current="@(aboutActive ? "page" : null)"><i class="bi bi-info-circle"></i><span>About</span></a></li>
@@ -68,7 +69,7 @@
     </nav>
 </header>
 
-<main class="py-4">
+<main class="vert-public-main py-4">
     @RenderBody()
 </main>
 

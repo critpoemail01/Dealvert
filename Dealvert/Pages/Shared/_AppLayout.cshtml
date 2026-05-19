@@ -1,10 +1,10 @@
-@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
 @{
     var currentPath = Context.Request.Path.Value ?? string.Empty;
     var isActive = (string pagePath) => currentPath.Equals(pagePath, StringComparison.OrdinalIgnoreCase);
     var isActivePrefix = (string pagePath) => currentPath.StartsWith(pagePath, StringComparison.OrdinalIgnoreCase);
     var isPriceAlertArea = isActivePrefix("/App/Alerts");
+    var workspaceTitle = ViewData["Title"]?.ToString() ?? "Workspace";
+    var userName = User?.Identity?.Name ?? "account";
 }
 
 <!DOCTYPE html>
@@ -22,95 +22,101 @@
     <link rel="icon" type="image/png" sizes="32x32" href="~/assets/brand/dealvert_favicon_32.png" asp-append-version="true" />
     <link rel="apple-touch-icon" sizes="512x512" href="~/assets/brand/dealvert_icon_512_clean.png" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/vert-template.css" asp-append-version="true" />
     @await RenderSectionAsync("Styles", required: false)
 </head>
 
-<body>
-<div class="app-shell app-shell-topnav">
+<body class="vert-app-page">
+<div class="app-shell">
+    <aside class="app-sidebar">
+        <a class="app-brand app-sidebar-brand brand-lockup" asp-page="/Index" aria-label="Dealvert home">
+            <span class="brand-mark">
+                <img src="~/assets/brand/dealvert_brand_mark.svg" width="44" height="44" asp-append-version="true" alt="" />
+            </span>
+            <span class="brand-wordmark">
+                <span class="brand-title">Dealvert<sup>TM</sup></span>
+                <span class="brand-subtitle">Price Radar AI</span>
+            </span>
+        </a>
+
+        <a class="app-sidebar-cta" asp-page="/App/Alerts/Create">
+            <span class="app-sidebar-cta-icon"><i class="bi bi-stars"></i></span>
+            <span>
+                <strong>Start watching</strong>
+                <small>Create price alerts or reports</small>
+            </span>
+        </a>
+
+        <nav class="app-nav" aria-label="App navigation">
+            <div class="app-nav-section">Workspace</div>
+            <a class="app-nav-link @(isActive("/App/Dashboard") ? "active" : "")" asp-page="/App/Dashboard">
+                <span class="app-nav-icon"><i class="bi bi-grid-fill"></i></span>
+                <span>Overview</span>
+            </a>
+            <a class="app-nav-link @(isPriceAlertArea ? "active" : "")" asp-page="/App/Alerts/Index">
+                <span class="app-nav-icon"><i class="bi bi-bag-check-fill"></i></span>
+                <span>Price alerts</span>
+            </a>
+            <a class="app-nav-link @(isActive("/App/Log") ? "active" : "")" asp-page="/App/Log">
+                <span class="app-nav-icon"><i class="bi bi-clock-history"></i></span>
+                <span>History</span>
+            </a>
+            <a class="app-nav-link @(isActivePrefix("/App/Planner") ? "active" : "")" asp-page="/App/Planner/Index">
+                <span class="app-nav-icon"><i class="bi bi-briefcase-fill"></i></span>
+                <span>Reports</span>
+            </a>
+
+            <div class="app-nav-section">Account and settings</div>
+            <a class="app-nav-link @(isActivePrefix("/App/Account") ? "active" : "")" asp-page="/App/Account/Index">
+                <span class="app-nav-icon"><i class="bi bi-person-fill"></i></span>
+                <span>Personal details</span>
+            </a>
+            <a class="app-nav-link @(isActive("/App/Billing") ? "active" : "")" asp-page="/App/Billing">
+                <span class="app-nav-icon"><i class="bi bi-credit-card-2-front-fill"></i></span>
+                <span>Subscription</span>
+            </a>
+            <a class="app-nav-link @(isActive("/App/Settings") ? "active" : "")" asp-page="/App/Settings">
+                <span class="app-nav-icon"><i class="bi bi-broadcast-pin"></i></span>
+                <span>Notifications</span>
+            </a>
+            <a class="app-nav-link @(isActive("/App/HelpDesk") ? "active" : "")" asp-page="/App/HelpDesk">
+                <span class="app-nav-icon"><i class="bi bi-chat-left-text-fill"></i></span>
+                <span>Help</span>
+            </a>
+        </nav>
+
+        <div class="app-sidebar-footer">
+            <a class="app-sidebar-user" asp-page="/App/Account/Index" title="@userName">
+                <i class="bi bi-person-circle"></i>
+                <span>@userName</span>
+            </a>
+        </div>
+    </aside>
+
     <div class="app-main">
-        <header class="app-auth-header">
-            <div class="app-auth-left">
-                <a class="app-brand brand-lockup app-brand-lockup" asp-page="/Index" aria-label="Dealvert home">
-                    <span class="brand-mark">
-                        <img src="~/assets/brand/dealvert_brand_mark.svg" width="44" height="44" asp-append-version="true" alt="" />
-                    </span>
-                    <span class="brand-wordmark">
-                        <span class="brand-title">Dealvert<sup>TM</sup></span>
-                        <span class="brand-subtitle">Price Radar AI</span>
-                    </span>
-                </a>
-                <span class="app-workspace-divider" aria-hidden="true"></span>
-                <div class="app-workspace-identity">
-                    <span><i class="bi bi-command"></i> Workspace</span>
-                    <strong>Price alerts</strong>
-                </div>
+        <header class="app-topbar">
+            <div class="app-workspace-context">
+                <span><i class="bi bi-command"></i> Workspace</span>
+                <strong>@workspaceTitle</strong>
             </div>
 
-            <div class="app-auth-actions">
-                <a class="app-user-pill" asp-page="/App/Account/Index">
-                    <i class="bi bi-person-circle"></i>
-                    <span>Hello, @User?.Identity?.Name</span>
-                </a>
+            <div class="app-topbar-actions">
                 @await Component.InvokeAsync("AppPlanBadge")
-                <a class="btn btn-primary app-upgrade-action" asp-page="/App/Billing">Upgrade plan</a>
-                <a class="btn btn-outline-secondary app-header-button" asp-page="/Index"><i class="bi bi-arrow-left me-1"></i>Back to site</a>
+                @await Component.InvokeAsync("AppPlanCta")
+                <a class="btn btn-sm btn-outline-secondary app-topbar-button app-site-return" asp-page="/Index">
+                    <i class="bi bi-arrow-left me-1"></i>Back to site
+                </a>
                 <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index")" method="post">
-                    <button type="submit" class="btn btn-outline-secondary app-header-button">
+                    <button type="submit" class="btn btn-sm btn-outline-secondary app-topbar-button">
                         <i class="bi bi-box-arrow-right me-1"></i>Sign out
                     </button>
                 </form>
             </div>
         </header>
 
-        <div class="app-workspace-body">
-            <aside class="app-menu-panel" aria-label="Workspace menu">
-                <a class="app-menu-cta" asp-page="/App/Alerts/Create">
-                    <span class="app-menu-cta-icon"><i class="bi bi-stars"></i></span>
-                    <span>
-                        <strong>Start watching</strong>
-                        <small>Create price alerts or reports</small>
-                    </span>
-                </a>
-
-                <nav class="app-menu-nav">
-                    <div class="app-menu-section">Workspace</div>
-                    <a class="app-menu-link @(isActive("/App/Dashboard") ? "active" : "")" asp-page="/App/Dashboard">
-                        <span class="app-menu-icon"><i class="bi bi-grid-fill"></i></span>
-                        <span>Overview</span>
-                    </a>
-                    <a class="app-menu-link @(isPriceAlertArea ? "active" : "")" asp-page="/App/Alerts/Index">
-                        <span class="app-menu-icon"><i class="bi bi-bag-check-fill"></i></span>
-                        <span>Price alerts</span>
-                    </a>
-                    <a class="app-menu-link @(isActive("/App/Log") ? "active" : "")" asp-page="/App/Log">
-                        <span class="app-menu-icon"><i class="bi bi-clock-history"></i></span>
-                        <span>History</span>
-                    </a>
-
-                    <div class="app-menu-section">Account and settings</div>
-                    <a class="app-menu-link @(isActive("/App/Billing") ? "active" : "")" asp-page="/App/Billing">
-                        <span class="app-menu-icon"><i class="bi bi-credit-card-2-front"></i></span>
-                        <span>Subscription</span>
-                    </a>
-                    <a class="app-menu-link @(isActive("/App/Settings") ? "active" : "")" asp-page="/App/Settings">
-                        <span class="app-menu-icon"><i class="bi bi-broadcast-pin"></i></span>
-                        <span>Notifications</span>
-                    </a>
-                    <a class="app-menu-link @(isActive("/App/HelpDesk") ? "active" : "")" asp-page="/App/HelpDesk">
-                        <span class="app-menu-icon"><i class="bi bi-chat-left-text-fill"></i></span>
-                        <span>Help</span>
-                    </a>
-                    <a class="app-menu-link @(isActivePrefix("/App/Account") ? "active" : "")" asp-page="/App/Account/Index">
-                        <span class="app-menu-icon"><i class="bi bi-person-fill"></i></span>
-                        <span>Personal details</span>
-                    </a>
-                </nav>
-            </aside>
-
-            <main class="app-content">
-                @RenderBody()
-            </main>
-        </div>
+        <main class="app-content">
+            @RenderBody()
+        </main>
     </div>
 </div>
 

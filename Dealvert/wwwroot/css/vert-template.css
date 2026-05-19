@@ -1,0 +1,2556 @@
+:root {
+  --vert-bg: #050b12;
+  --vert-bg-soft: #07131f;
+  --vert-surface: rgba(12, 22, 32, 0.92);
+  --vert-surface-solid: #0c1620;
+  --vert-surface-2: #101d2a;
+  --vert-border: rgba(148, 163, 184, 0.16);
+  --vert-border-strong: rgba(56, 189, 248, 0.28);
+  --vert-text: #f6fbff;
+  --vert-muted: rgba(226, 232, 240, 0.68);
+  --vert-muted-strong: rgba(226, 232, 240, 0.84);
+  --vert-ink: #041016;
+  --vert-accent: #32e6a8;
+  --vert-accent-2: #38bdf8;
+  --vert-accent-3: #29d9c8;
+  --vert-warning: #f8d66d;
+  --vert-danger: #fb7185;
+  --vert-gradient: linear-gradient(135deg, #32e6a8 0%, #29d9c8 48%, #38bdf8 100%);
+  --vert-gradient-hover: linear-gradient(135deg, #39edb1 0%, #2ee0cf 48%, #45c7ff 100%);
+  --vert-panel-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.014));
+  --vert-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
+  --vert-shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.24);
+  --vert-radius: 12px;
+  --vert-radius-sm: 8px;
+  --alivert-bg: var(--vert-bg);
+  --alivert-surface: var(--vert-surface);
+  --alivert-border: var(--vert-border);
+  --alivert-text: var(--vert-text);
+  --alivert-muted: var(--vert-muted);
+  --alivert-ink: var(--vert-ink);
+  --alivert-positive: var(--vert-accent);
+  --alivert-accent: var(--vert-accent);
+  --alivert-accent-2: var(--vert-accent-2);
+  --alivert-primary-gradient: var(--vert-gradient);
+  --alivert-panel-gradient: var(--vert-panel-gradient);
+  --alivert-shadow: var(--vert-shadow);
+  --alivert-shadow-soft: var(--vert-shadow-soft);
+  --alivert-radius: var(--vert-radius);
+  --alivert-accent-rgb: 50, 230, 168;
+  --alivert-accent-2-rgb: 56, 189, 248;
+  --alivert-positive-rgb: 50, 230, 168;
+  --Promovert-bg: var(--vert-bg);
+  --Promovert-surface: var(--vert-surface);
+  --Promovert-border: var(--vert-border);
+  --Promovert-text: var(--vert-text);
+  --Promovert-muted: var(--vert-muted);
+  --Promovert-ink: var(--vert-ink);
+  --Promovert-positive: var(--vert-accent);
+  --Promovert-accent: var(--vert-accent);
+  --Promovert-accent-2: var(--vert-accent-2);
+  --Promovert-primary-gradient: var(--vert-gradient);
+  --Promovert-panel-gradient: var(--vert-panel-gradient);
+  --Promovert-shadow: var(--vert-shadow);
+  --Promovert-shadow-soft: var(--vert-shadow-soft);
+  --Promovert-radius: var(--vert-radius);
+  --Promovert-accent-rgb: 50, 230, 168;
+  --Promovert-accent-2-rgb: 56, 189, 248;
+  --Promovert-positive-rgb: 50, 230, 168;
+  --dealvert-bg: var(--vert-bg);
+  --dealvert-surface: var(--vert-surface);
+  --dealvert-border: var(--vert-border);
+  --dealvert-text: var(--vert-text);
+  --dealvert-muted: var(--vert-muted);
+  --dealvert-ink: var(--vert-ink);
+  --dealvert-warm: var(--vert-accent);
+  --dealvert-positive: var(--vert-accent);
+  --dealvert-accent: var(--vert-accent);
+  --dealvert-accent-2: var(--vert-accent-2);
+  --dealvert-primary-gradient: var(--vert-gradient);
+  --dealvert-panel-gradient: var(--vert-panel-gradient);
+  --dealvert-shadow: var(--vert-shadow);
+  --dealvert-shadow-soft: var(--vert-shadow-soft);
+  --dealvert-radius: var(--vert-radius);
+  --dealvert-accent-rgb: 50, 230, 168;
+  --dealvert-accent-2-rgb: 56, 189, 248;
+  --dealvert-positive-rgb: 50, 230, 168;
+  --workvert-bg: var(--vert-bg);
+  --workvert-surface: var(--vert-surface);
+  --workvert-border: var(--vert-border);
+  --workvert-text: var(--vert-text);
+  --workvert-muted: var(--vert-muted);
+  --workvert-ink: var(--vert-ink);
+  --workvert-positive: var(--vert-accent);
+  --workvert-accent: var(--vert-accent);
+  --workvert-accent-2: var(--vert-accent-2);
+  --workvert-primary-gradient: var(--vert-gradient);
+  --workvert-panel-gradient: var(--vert-panel-gradient);
+  --workvert-shadow: var(--vert-shadow);
+  --workvert-shadow-soft: var(--vert-shadow-soft);
+  --workvert-radius: var(--vert-radius);
+  --workvert-accent-rgb: 50, 230, 168;
+  --workvert-accent-2-rgb: 56, 189, 248;
+  --workvert-positive-rgb: 50, 230, 168;
+}
+
+html {
+  min-height: 100%;
+  background: var(--vert-bg);
+  overflow-y: visible !important;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--vert-text);
+  background:
+    radial-gradient(980px 520px at 12% -10%, rgba(50, 230, 168, 0.13), transparent 62%),
+    radial-gradient(900px 520px at 92% 0%, rgba(56, 189, 248, 0.14), transparent 58%),
+    linear-gradient(180deg, #050b12 0%, #07131f 48%, #050b12 100%);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+body.vert-public-page {
+  overflow-x: hidden;
+}
+
+body.vert-app-page::before,
+body.vert-public-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.032) 1px, transparent 1px) !important;
+  background-size: 48px 48px !important;
+  mask-image: radial-gradient(ellipse at top, rgba(0, 0, 0, 0.75), transparent 60%) !important;
+  opacity: 0.70 !important;
+}
+
+a {
+  color: inherit;
+}
+
+.btn,
+.form-control,
+.form-select {
+  border-radius: var(--vert-radius-sm) !important;
+}
+
+.btn-primary,
+.btn-outline-secondary,
+.btn-secondary {
+  min-height: 42px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 0 16px !important;
+  border-radius: var(--vert-radius-sm) !important;
+  font-weight: 850 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+.btn-lg.btn-primary,
+.btn-lg.btn-outline-secondary,
+.btn-lg.btn-secondary {
+  min-height: 48px !important;
+  padding: 0 18px !important;
+  font-size: 1rem !important;
+}
+
+.btn-primary,
+.nav-cta-primary,
+.auth-submit,
+.app-upgrade-action,
+.app-topbar-upgrade,
+.app-plan-cta .btn,
+.app-topbar-plan-action .btn {
+  color: var(--vert-ink) !important;
+  border: 0 !important;
+  background: var(--vert-gradient) !important;
+  box-shadow: 0 14px 30px rgba(56, 189, 248, 0.22) !important;
+  font-weight: 850;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.nav-cta-primary:hover,
+.nav-cta-primary:focus,
+.auth-submit:hover,
+.auth-submit:focus,
+.app-upgrade-action:hover,
+.app-upgrade-action:focus,
+.app-topbar-upgrade:hover,
+.app-topbar-upgrade:focus {
+  color: var(--vert-ink) !important;
+  background: var(--vert-gradient-hover) !important;
+  box-shadow: 0 16px 34px rgba(56, 189, 248, 0.30) !important;
+  filter: none !important;
+}
+
+.btn-outline-secondary,
+.nav-cta-secondary,
+.app-topbar-button,
+.app-header-button,
+.app-site-return,
+.app-topbar-site-link {
+  color: var(--vert-muted-strong) !important;
+  border-color: var(--vert-border) !important;
+  background: rgba(255, 255, 255, 0.045) !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.nav-cta-secondary:hover,
+.nav-cta-secondary:focus,
+.app-topbar-button:hover,
+.app-header-button:hover,
+.app-site-return:hover,
+.app-topbar-site-link:hover {
+  color: var(--vert-text) !important;
+  border-color: var(--vert-border-strong) !important;
+  background: rgba(56, 189, 248, 0.10) !important;
+}
+
+.form-control,
+.form-select,
+textarea.form-control {
+  color: var(--vert-text) !important;
+  border-color: var(--vert-border) !important;
+  background: rgba(6, 16, 25, 0.90) !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+  color: var(--vert-text) !important;
+  border-color: rgba(56, 189, 248, 0.56) !important;
+  background: rgba(6, 16, 25, 0.98) !important;
+  box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.13) !important;
+}
+
+.surface,
+.surface-solid,
+.app-panel,
+.app-stat-card,
+.metric-card,
+.plan,
+.value-card,
+.news-card,
+.step-card,
+.account-section,
+.credit-pack,
+.notification-channel-card,
+.dashboard-plan-card,
+.auth-form-panel,
+.auth-aside,
+.modal-content {
+  color: var(--vert-text);
+  border: 1px solid var(--vert-border) !important;
+  background:
+    var(--vert-panel-gradient),
+    rgba(12, 22, 32, 0.86) !important;
+  box-shadow: var(--vert-shadow-soft) !important;
+}
+
+.tag,
+.hero-kicker,
+.plan-badge,
+.app-status-badge,
+.badge-soft,
+.footer-badges span,
+.micro-proof-row span {
+  min-height: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 6px 12px !important;
+  border: 1px solid rgba(50, 230, 168, 0.24) !important;
+  border-radius: 999px !important;
+  color: var(--vert-muted-strong) !important;
+  background: rgba(50, 230, 168, 0.10) !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+body.vert-public-page .tag,
+body.vert-public-page .hero-kicker,
+body.vert-app-page .tag,
+body.vert-app-page .hero-kicker {
+  display: inline-flex !important;
+}
+
+body.vert-public-page .hero-title {
+  color: var(--vert-text) !important;
+  font-size: 2.55rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.08 !important;
+}
+
+body.vert-public-page .lead {
+  color: var(--vert-muted) !important;
+  font-size: 0.98rem !important;
+  font-weight: 650 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.55 !important;
+}
+
+body.vert-public-page .surface,
+body.vert-public-page .plan,
+body.vert-public-page .value-card,
+body.vert-public-page .news-card,
+body.vert-public-page .step-card,
+body.vert-public-page .auth-form-panel,
+body.vert-public-page .auth-aside {
+  min-height: 0 !important;
+  padding: 24px !important;
+  border-radius: var(--vert-radius) !important;
+}
+
+body.vert-public-page .hero-section {
+  margin-top: 0 !important;
+  padding-top: 24px !important;
+  padding-bottom: 26px !important;
+}
+
+body.vert-public-page .product-landing.hero-section {
+  padding-top: 24px !important;
+}
+
+body.vert-public-page .hero-card,
+body.vert-public-page .page-hero,
+body.vert-public-page .pricing-hero,
+body.vert-public-page .product-landing-hero,
+body.vert-public-page .product-hero,
+body.vert-public-page .professional-hero {
+  min-height: 0 !important;
+  padding: 28px !important;
+}
+
+body.vert-public-page .hero-card .row {
+  --bs-gutter-x: 1.5rem !important;
+  --bs-gutter-y: 1.25rem !important;
+}
+
+body.vert-public-page .micro-proof-row {
+  margin-top: 14px !important;
+  gap: 8px !important;
+}
+
+body.vert-public-page .micro-proof-row span {
+  min-height: 28px !important;
+  padding: 5px 10px !important;
+  font-size: 0.78rem !important;
+}
+
+body.vert-public-page .hero-proof {
+  max-width: 520px !important;
+  gap: 8px !important;
+  margin-top: 16px !important;
+}
+
+body.vert-public-page .hero-proof > div {
+  padding: 12px !important;
+}
+
+body.vert-public-page .hero-proof strong {
+  font-size: 1.18rem !important;
+  line-height: 1.05 !important;
+}
+
+body.vert-public-page .hero-proof span {
+  font-size: 0.78rem !important;
+  line-height: 1.35 !important;
+}
+
+body.vert-public-page .career-preview-panel,
+body.vert-public-page .market-panel,
+body.vert-public-page .proof-panel,
+body.vert-public-page .deal-radar-panel,
+body.vert-public-page .mission-visual,
+body.vert-public-page .quote-card {
+  min-height: 0 !important;
+  gap: 10px !important;
+  padding: 16px !important;
+  border-radius: var(--vert-radius) !important;
+}
+
+body.vert-public-page .career-preview-profile,
+body.vert-public-page .career-preview-row,
+body.vert-public-page .career-preview-alert,
+body.vert-public-page .proof-row,
+body.vert-public-page .deal-radar-product,
+body.vert-public-page .deal-radar-row,
+body.vert-public-page .deal-radar-alert,
+body.vert-public-page .mission-profile-card,
+body.vert-public-page .mission-plan-card,
+body.vert-public-page .mission-ethics-note {
+  padding: 12px !important;
+  border-radius: var(--vert-radius-sm) !important;
+}
+
+body.vert-public-page .career-preview-profile > span,
+body.vert-public-page .mission-avatar {
+  width: 38px !important;
+  height: 38px !important;
+}
+
+body.vert-public-page .career-preview-row > span,
+body.vert-public-page .mission-score span {
+  font-size: 1.12rem !important;
+}
+
+.vert-public-header,
+.public-site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  backdrop-filter: blur(18px);
+}
+
+.vert-public-nav,
+.alivert-nav,
+.Promovert-nav,
+.dealvert-nav,
+.workvert-nav,
+.public-workspace-nav {
+  min-height: 78px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.13) !important;
+  background:
+    linear-gradient(180deg, rgba(5, 11, 18, 0.94), rgba(5, 11, 18, 0.82)),
+    rgba(5, 11, 18, 0.92) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.20) !important;
+}
+
+.vert-public-nav-inner,
+.public-nav-container,
+.public-nav-inner {
+  width: min(100%, 1760px) !important;
+  max-width: 1760px !important;
+  min-height: 78px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding: 0 clamp(24px, 3vw, 58px) !important;
+  display: flex !important;
+  align-items: center;
+  gap: 28px !important;
+}
+
+@media (min-width: 992px) {
+  .vert-public-nav,
+  .alivert-nav,
+  .Promovert-nav,
+  .dealvert-nav,
+  .workvert-nav,
+  .public-workspace-nav,
+  .vert-public-nav-inner,
+  .public-nav-container,
+  .public-nav-inner {
+    height: 78px !important;
+  }
+}
+
+.brand-lockup {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-width: 0 !important;
+  text-decoration: none !important;
+}
+
+.vert-public-nav .navbar-brand {
+  margin-right: 0;
+  padding: 0;
+}
+
+.vert-public-nav .brand-mark,
+.public-workspace-nav .brand-mark,
+.public-site-header .brand-mark {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+}
+
+.vert-public-nav .brand-mark img,
+.public-workspace-nav .brand-mark img,
+.public-site-header .brand-mark img {
+  width: 34px !important;
+  height: 34px !important;
+}
+
+.brand-mark {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  flex: 0 0 48px !important;
+  border: 1px solid rgba(56, 189, 248, 0.22) !important;
+  border-radius: 14px !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    rgba(6, 16, 25, 0.72) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 12px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
+.brand-mark img {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+}
+
+.brand-wordmark {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.brand-title {
+  color: #ffffff !important;
+  font-size: 1.08rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+.brand-title sup {
+  margin-left: 1px;
+  color: var(--vert-accent-2);
+  font-size: 0.46em;
+}
+
+.brand-subtitle {
+  color: var(--vert-muted) !important;
+  font-size: 0.74rem !important;
+  font-weight: 760 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.15 !important;
+}
+
+.navbar-collapse {
+  min-width: 0;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 18px;
+}
+
+.vert-public-nav-links,
+.public-nav-links,
+.navbar-nav.me-auto {
+  align-items: center;
+  gap: 8px !important;
+}
+
+.vert-public-nav .nav-link,
+.alivert-nav .nav-link,
+.Promovert-nav .nav-link,
+.dealvert-nav .nav-link,
+.workvert-nav .nav-link {
+  max-width: none !important;
+  min-height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 8px 12px !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--vert-radius-sm) !important;
+  color: var(--vert-muted) !important;
+  background: transparent !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  overflow: visible !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+}
+
+.vert-public-nav .nav-link i,
+.alivert-nav .nav-link i,
+.Promovert-nav .nav-link i,
+.dealvert-nav .nav-link i,
+.workvert-nav .nav-link i {
+  color: rgba(56, 189, 248, 0.86) !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+}
+
+.vert-public-nav .nav-link.active,
+.vert-public-nav .nav-link:hover,
+.vert-public-nav .nav-link:focus,
+.alivert-nav .nav-link.active,
+.alivert-nav .nav-link:hover,
+.alivert-nav .nav-link:focus,
+.Promovert-nav .nav-link.active,
+.Promovert-nav .nav-link:hover,
+.Promovert-nav .nav-link:focus,
+.dealvert-nav .nav-link.active,
+.dealvert-nav .nav-link:hover,
+.dealvert-nav .nav-link:focus,
+.workvert-nav .nav-link.active,
+.workvert-nav .nav-link:hover,
+.workvert-nav .nav-link:focus {
+  color: #ffffff !important;
+  border-color: rgba(56, 189, 248, 0.24) !important;
+  background: rgba(56, 189, 248, 0.10) !important;
+}
+
+.auth-nav-actions {
+  min-width: 0;
+  max-width: 100%;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.auth-nav-actions .nav-item,
+.auth-nav-actions .form-inline {
+  min-width: 0;
+}
+
+.auth-nav-actions .nav-link {
+  min-width: 0;
+  max-width: 220px;
+}
+
+.auth-nav-actions.is-authenticated .auth-user-link,
+.auth-nav-actions.is-authenticated .public-user-link {
+  max-width: 180px !important;
+}
+
+.auth-nav-actions .nav-user-link,
+.auth-nav-actions .auth-user-link,
+.auth-nav-actions .public-user-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.auth-nav-actions .nav-link span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.auth-nav-actions .nav-workspace-cta,
+.auth-nav-actions .public-open-workspace {
+  flex: 0 0 auto;
+}
+
+.nav-cta {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  border-radius: var(--vert-radius-sm);
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.auth-nav-actions .nav-get-started {
+  flex: 0 0 144px;
+  width: 144px;
+  min-width: 144px;
+  height: 43px;
+  min-height: 43px;
+  padding: 0 14px;
+  border-radius: var(--vert-radius-sm);
+  color: var(--vert-ink) !important;
+  background: var(--vert-gradient) !important;
+  box-shadow: 0 14px 30px rgba(56, 189, 248, 0.22) !important;
+  font-size: 1rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.navbar-toggler {
+  width: 44px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid var(--vert-border) !important;
+  border-radius: var(--vert-radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-toggler span {
+  width: 18px;
+  height: 2px;
+  display: block;
+  border-radius: 999px;
+  background: var(--vert-text);
+}
+
+.vert-public-main,
+main.py-4,
+.public-main {
+  min-height: calc(100vh - 78px);
+  padding-top: 0 !important;
+  padding-bottom: 24px !important;
+}
+
+body.vert-public-page .container,
+body.vert-public-page .container-fluid,
+body.vert-public-page .hero-section,
+body.vert-public-page .page-hero,
+body.vert-public-page .pricing-hero,
+body.vert-public-page .page-hero-grid,
+body.vert-public-page .proof-panel,
+body.vert-public-page .promo-strip,
+body.vert-public-page .conversion-band {
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.vert-public-page .hero-section > .container,
+body.vert-public-page .vert-public-main > .container,
+body.vert-public-page .public-main > .container,
+body.vert-public-page main > .container {
+  width: min(100%, 1760px) !important;
+  max-width: 1760px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-right: clamp(24px, 3vw, 58px) !important;
+  padding-left: clamp(24px, 3vw, 58px) !important;
+}
+
+body.vert-public-page .page-hero-grid,
+body.vert-public-page .hero-actions,
+body.vert-public-page .conversion-actions {
+  min-width: 0 !important;
+}
+
+body.vert-app-page .settings-timezone-panel,
+body.vert-app-page .settings-timezone-copy,
+body.vert-app-page .settings-timezone-copy > div,
+body.vert-app-page .settings-timezone-control,
+body.vert-app-page .settings-timezone-control .combo-select,
+body.vert-app-page .settings-timezone-card,
+body.vert-app-page .settings-timezone-actions {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.vert-app-page .settings-timezone-copy h2,
+body.vert-app-page .settings-timezone-copy p,
+body.vert-app-page .settings-timezone-actions span {
+  max-width: 100% !important;
+  overflow-wrap: anywhere !important;
+}
+
+.site-footer,
+.footer {
+  position: relative !important;
+  overflow: hidden !important;
+  margin-top: 40px !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.18) !important;
+  background:
+    radial-gradient(720px 260px at 10% 0%, rgba(50, 230, 168, 0.13), transparent 62%),
+    radial-gradient(760px 280px at 92% 12%, rgba(56, 189, 248, 0.10), transparent 60%),
+    linear-gradient(180deg, rgba(5, 11, 18, 0.98), rgba(4, 9, 15, 0.995)) !important;
+}
+
+.site-footer::before,
+.footer::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, rgba(50, 230, 168, 0.72), rgba(56, 189, 248, 0.68), transparent) !important;
+  pointer-events: none !important;
+}
+
+.site-footer .container,
+.footer .container {
+  width: min(100%, 1760px) !important;
+  max-width: 1760px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding: 34px clamp(24px, 3vw, 58px) 22px !important;
+}
+
+.footer-main {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  align-items: start !important;
+  gap: 14px !important;
+}
+
+.footer-brand-panel {
+  max-width: none !important;
+  min-width: 0 !important;
+  min-height: 240px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  padding: 20px !important;
+  border: 1px solid rgba(50, 230, 168, 0.16) !important;
+  border-radius: var(--vert-radius) !important;
+  background:
+    radial-gradient(360px 160px at 0% 0%, rgba(50, 230, 168, 0.10), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.052), rgba(255, 255, 255, 0.014)),
+    rgba(8, 18, 28, 0.62) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045), 0 16px 34px rgba(0, 0, 0, 0.20) !important;
+}
+
+.footer-brand {
+  gap: 12px !important;
+}
+
+.footer-brand-mark,
+.site-footer .brand-mark.footer-brand-mark {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  flex-basis: 48px !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 14px 28px rgba(0, 0, 0, 0.28) !important;
+}
+
+.footer-brand-mark img,
+.site-footer .brand-mark.footer-brand-mark img {
+  width: 34px !important;
+  height: 34px !important;
+}
+
+.footer-brand-panel p {
+  max-width: 100% !important;
+  margin: 0 !important;
+  color: var(--vert-muted) !important;
+  font-size: 0.94rem !important;
+  font-weight: 650 !important;
+  line-height: 1.55 !important;
+}
+
+.footer-badges {
+  margin-top: auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.footer-badges span {
+  min-height: 30px !important;
+  padding: 6px 10px !important;
+  border-color: rgba(50, 230, 168, 0.22) !important;
+  background: rgba(50, 230, 168, 0.09) !important;
+  color: var(--vert-muted-strong) !important;
+  font-size: 0.78rem !important;
+}
+
+.footer-badges i {
+  color: var(--vert-accent) !important;
+  font-size: 0.9rem !important;
+}
+
+.footer-nav-grid {
+  min-width: 0 !important;
+  align-self: start !important;
+  display: contents !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.footer-nav-grid > div {
+  min-width: 0 !important;
+  min-height: 240px !important;
+  display: grid !important;
+  align-content: start !important;
+  gap: 6px !important;
+  padding: 16px !important;
+  border: 1px solid rgba(148, 163, 184, 0.12) !important;
+  border-radius: var(--vert-radius) !important;
+  background:
+    radial-gradient(320px 140px at 100% 0%, rgba(56, 189, 248, 0.075), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.046), rgba(255, 255, 255, 0.012)),
+    rgba(7, 17, 27, 0.56) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 16px 34px rgba(0, 0, 0, 0.18) !important;
+}
+
+.footer-nav-grid h2 {
+  min-height: 28px !important;
+  margin: 0 0 4px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: var(--vert-text) !important;
+  font-size: 0.73rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+.footer-nav-grid h2::before {
+  content: "" !important;
+  width: 8px !important;
+  height: 8px !important;
+  flex: 0 0 8px !important;
+  border-radius: 999px !important;
+  background: var(--vert-gradient) !important;
+  box-shadow: 0 0 0 4px rgba(50, 230, 168, 0.08) !important;
+}
+
+.footer-link {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 36px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  padding: 7px 10px !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--vert-radius-sm) !important;
+  color: var(--vert-muted) !important;
+  background: transparent !important;
+  font-size: 0.91rem !important;
+  font-weight: 760 !important;
+  line-height: 1.15 !important;
+  text-decoration: none !important;
+  white-space: normal !important;
+}
+
+.footer-link::after {
+  content: "\2192" !important;
+  color: rgba(56, 189, 248, 0.62) !important;
+  font-size: 0.92rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  opacity: 0 !important;
+  transform: translateX(-4px) !important;
+  transition: opacity 0.16s ease, transform 0.16s ease !important;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--vert-text) !important;
+  border-color: rgba(56, 189, 248, 0.18) !important;
+  background: rgba(56, 189, 248, 0.075) !important;
+  transform: translateX(2px) !important;
+}
+
+.footer-link:hover::after,
+.footer-link:focus::after {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.footer-button-link {
+  border: 0 !important;
+  appearance: none !important;
+  text-align: left !important;
+}
+
+.footer-bottom {
+  min-width: 0 !important;
+  margin-top: 24px !important;
+  padding-top: 18px !important;
+  border-top: 1px solid rgba(148, 163, 184, 0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  color: rgba(226, 232, 240, 0.52) !important;
+  font-size: 0.82rem !important;
+  font-weight: 680 !important;
+  line-height: 1.4 !important;
+}
+
+.footer-bottom span:last-child {
+  text-align: right !important;
+}
+
+body.vert-app-page {
+  overflow-x: hidden;
+}
+
+body.vert-app-page .app-shell {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 292px minmax(0, 1fr) !important;
+  align-items: stretch;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background:
+    radial-gradient(900px 480px at 0% 0%, rgba(50, 230, 168, 0.10), transparent 62%),
+    radial-gradient(900px 520px at 100% 0%, rgba(56, 189, 248, 0.12), transparent 58%),
+    var(--vert-bg);
+}
+
+body.vert-app-page .app-sidebar {
+  width: 292px !important;
+  min-width: 292px !important;
+  max-width: 292px !important;
+  box-sizing: border-box !important;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0 !important;
+  padding: 22px 18px !important;
+  border-top: 0 !important;
+  border-right: 1px solid var(--vert-border) !important;
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, rgba(9, 19, 29, 0.98), rgba(6, 13, 21, 0.98)),
+    var(--vert-bg-soft);
+  box-shadow: 18px 0 50px rgba(0, 0, 0, 0.26);
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+body.vert-app-page .app-main {
+  min-width: 0;
+  min-height: 0 !important;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  overflow-x: hidden !important;
+}
+
+body.vert-app-page .app-brand,
+body.vert-app-page .app-sidebar-brand {
+  min-height: 56px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 6px 4px 0 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+body.vert-app-page .app-brand .brand-mark,
+body.vert-app-page .app-sidebar-brand .brand-mark {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border-radius: 14px !important;
+}
+
+body.vert-app-page .app-brand .brand-mark img,
+body.vert-app-page .app-sidebar-brand .brand-mark img {
+  width: 34px !important;
+  height: 34px !important;
+}
+
+body.vert-app-page .app-sidebar > .app-brand,
+body.vert-app-page .app-sidebar > .app-sidebar-brand,
+body.vert-app-page .app-sidebar > .app-sidebar-cta,
+body.vert-app-page .app-sidebar > .app-nav,
+body.vert-app-page .app-sidebar > .app-menu-nav,
+body.vert-app-page .app-sidebar > .app-sidebar-footer {
+  width: 240px !important;
+  max-width: 240px !important;
+}
+
+body.vert-app-page .app-sidebar-cta,
+body.vert-app-page .app-sidebar-quick-action,
+body.vert-app-page .app-menu-cta {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: var(--vert-radius);
+  color: var(--vert-text);
+  text-decoration: none;
+  background:
+    linear-gradient(135deg, rgba(50, 230, 168, 0.14), rgba(56, 189, 248, 0.10)),
+    rgba(255, 255, 255, 0.035);
+  box-shadow: none !important;
+}
+
+body.vert-app-page .app-sidebar-cta:hover,
+body.vert-app-page .app-sidebar-quick-action:hover,
+body.vert-app-page .app-menu-cta:hover {
+  border-color: rgba(56, 189, 248, 0.34);
+  transform: translateY(-1px);
+}
+
+body.vert-app-page .app-sidebar-cta-icon,
+body.vert-app-page .app-sidebar-quick-icon,
+body.vert-app-page .app-menu-cta-icon,
+body.vert-app-page .app-sidebar-cta-main > i {
+  width: 48px !important;
+  height: 48px !important;
+  flex: 0 0 48px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  border-radius: 14px !important;
+  color: var(--vert-ink) !important;
+  background: var(--vert-gradient) !important;
+  box-shadow: none !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+}
+
+body.vert-app-page .app-sidebar-cta strong,
+body.vert-app-page .app-sidebar-quick-action strong,
+body.vert-app-page .app-menu-cta strong,
+body.vert-app-page .app-sidebar-cta-main strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+body.vert-app-page .app-sidebar-cta small,
+body.vert-app-page .app-sidebar-quick-action small,
+body.vert-app-page .app-menu-cta small,
+body.vert-app-page .app-sidebar-cta-main small {
+  display: block;
+  margin-top: 3px;
+  color: var(--vert-muted);
+  font-size: 0.76rem;
+  font-weight: 800 !important;
+  line-height: 1.25;
+}
+
+body.vert-app-page .app-nav,
+body.vert-app-page .app-menu-nav {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 6px !important;
+  margin-top: 2px !important;
+}
+
+body.vert-app-page .app-nav-section,
+body.vert-app-page .app-menu-section {
+  margin: 16px 8px 6px;
+  padding: 0 !important;
+  height: auto !important;
+  color: rgba(226, 232, 240, 0.46);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.vert-app-page .app-nav-link,
+body.vert-app-page .app-menu-link {
+  height: 44px !important;
+  min-height: 44px !important;
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: center !important;
+  gap: 9px !important;
+  padding: 4px 12px !important;
+  border: 1px solid transparent;
+  border-radius: var(--vert-radius-sm);
+  color: var(--vert-muted-strong);
+  background: transparent !important;
+  text-decoration: none;
+  font-size: 0.93rem;
+  font-weight: 820;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+}
+
+body.vert-app-page .app-nav-link i,
+body.vert-app-page .app-menu-link i {
+  color: rgba(56, 189, 248, 0.82);
+  font-size: 0.78rem !important;
+  line-height: 1 !important;
+}
+
+body.vert-app-page .app-nav-icon,
+body.vert-app-page .app-menu-icon {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  flex: 0 0 24px !important;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(56, 189, 248, 0.16) !important;
+  border-radius: 7px !important;
+  color: rgba(56, 189, 248, 0.90) !important;
+  background: rgba(56, 189, 248, 0.08) !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+}
+
+body.vert-app-page .app-nav-icon i,
+body.vert-app-page .app-menu-icon i {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  display: inline-block !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 0.76rem !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  transform: none !important;
+}
+
+body.vert-app-page .app-nav-link:hover,
+body.vert-app-page .app-nav-link:focus,
+body.vert-app-page .app-menu-link:hover,
+body.vert-app-page .app-menu-link:focus,
+body.vert-app-page .app-nav-link.active,
+body.vert-app-page .app-menu-link.active {
+  color: #ffffff;
+  border-color: rgba(56, 189, 248, 0.22);
+  background: rgba(56, 189, 248, 0.10) !important;
+}
+
+body.vert-app-page .app-nav-link.active i,
+body.vert-app-page .app-menu-link.active i {
+  color: var(--vert-ink);
+}
+
+body.vert-app-page .app-nav-link:hover .app-nav-icon,
+body.vert-app-page .app-menu-link:hover .app-menu-icon {
+  color: rgba(50, 230, 168, 0.96) !important;
+  background: rgba(50, 230, 168, 0.10) !important;
+}
+
+body.vert-app-page .app-nav-link.active .app-nav-icon,
+body.vert-app-page .app-menu-link.active .app-menu-icon {
+  color: var(--vert-ink) !important;
+  border-color: transparent !important;
+  background: var(--vert-gradient) !important;
+  transform: none;
+}
+
+body.vert-app-page .app-sidebar-footer {
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 0 !important;
+  width: 240px !important;
+  max-width: 240px !important;
+  margin-top: auto !important;
+  padding: 14px 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--vert-border) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.vert-app-page .app-sidebar-user,
+body.vert-app-page .app-user-pill,
+body.vert-app-page .app-topbar-user,
+body.vert-app-page .app-topbar-greeting {
+  min-width: 0;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--vert-muted-strong);
+  text-decoration: none;
+  font-weight: 780;
+}
+
+body.vert-app-page .app-sidebar-user {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 50px !important;
+  display: inline-flex !important;
+  padding: 12px !important;
+  border: 1px solid rgba(45, 212, 191, 0.14) !important;
+  border-radius: 14px !important;
+  background: rgba(45, 212, 191, 0.06) !important;
+  box-sizing: border-box !important;
+  box-shadow: none !important;
+  align-self: stretch !important;
+  font-size: 0.88rem !important;
+  font-weight: 850 !important;
+  line-height: 1.2 !important;
+}
+
+body.vert-app-page .app-sidebar-user i {
+  color: rgba(45, 212, 191, 0.92) !important;
+  font-size: 0.95rem !important;
+  line-height: 1 !important;
+}
+
+body.vert-app-page .app-sidebar-user span,
+body.vert-app-page .app-user-pill span,
+body.vert-app-page .app-topbar-user span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.vert-app-page .app-sidebar-user span {
+  font-size: 0.88rem !important;
+  font-weight: 850 !important;
+  line-height: 1.2 !important;
+}
+
+body.vert-app-page .app-topbar,
+body.vert-app-page .app-auth-header {
+  height: 76px;
+  min-height: 76px;
+  position: relative !important;
+  top: auto !important;
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 26px;
+  border: 0 !important;
+  border-bottom: 1px solid var(--vert-border) !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, rgba(5, 11, 18, 0.94), rgba(5, 11, 18, 0.80)),
+    rgba(5, 11, 18, 0.92);
+  backdrop-filter: blur(18px);
+  box-shadow: none !important;
+}
+
+body.vert-app-page .app-workspace-context,
+body.vert-app-page .app-workspace-identity,
+body.vert-app-page .app-topbar-title {
+  min-width: 0;
+  max-width: 220px;
+  flex: 1 1 auto;
+  display: grid;
+  gap: 3px;
+}
+
+body.vert-app-page .app-workspace-context span,
+body.vert-app-page .app-workspace-identity span,
+body.vert-app-page .app-topbar-kicker {
+  color: var(--vert-muted);
+  font-size: 0.75rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.vert-app-page .app-workspace-context strong,
+body.vert-app-page .app-workspace-identity strong,
+body.vert-app-page .app-topbar-title strong {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 900;
+  line-height: 1.15;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.vert-app-page .app-topbar-actions,
+body.vert-app-page .app-auth-actions,
+body.vert-app-page .app-topbar-account {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 0;
+  max-width: calc(100% - 238px);
+  flex: 0 1 auto;
+  flex-wrap: nowrap;
+}
+
+body.vert-app-page .app-topbar-actions form,
+body.vert-app-page .app-auth-actions form,
+body.vert-app-page .app-topbar-account form {
+  margin: 0;
+}
+
+body.vert-app-page .app-plan-badge {
+  min-height: 42px;
+  max-width: 340px;
+  min-width: 0;
+  flex: 1 1 240px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  gap: 9px;
+  padding: 8px 13px;
+  border: 1px solid rgba(50, 230, 168, 0.24);
+  border-radius: 999px;
+  color: var(--vert-muted-strong);
+  text-decoration: none;
+  background:
+    linear-gradient(135deg, rgba(50, 230, 168, 0.12), rgba(56, 189, 248, 0.08)),
+    rgba(255, 255, 255, 0.035);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+body.vert-app-page .app-plan-badge:hover,
+body.vert-app-page .app-plan-badge:focus {
+  color: #ffffff;
+  border-color: rgba(56, 189, 248, 0.34);
+  background:
+    linear-gradient(135deg, rgba(50, 230, 168, 0.14), rgba(56, 189, 248, 0.10)),
+    rgba(255, 255, 255, 0.045);
+}
+
+body.vert-app-page .app-plan-badge i {
+  color: var(--vert-accent);
+}
+
+body.vert-app-page .app-plan-badge.unlimited i {
+  color: var(--vert-accent-2);
+}
+
+body.vert-app-page .app-plan-copy {
+  min-width: 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+body.vert-app-page .app-plan-label {
+  color: rgba(226, 232, 240, 0.56);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+body.vert-app-page .app-plan-copy strong {
+  color: #ffffff;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+body.vert-app-page .app-plan-copy small {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(226, 232, 240, 0.58);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+body.vert-app-page .app-upgrade-action,
+body.vert-app-page .app-topbar-button {
+  min-height: 42px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 16px;
+  border-radius: var(--vert-radius-sm);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+body.vert-app-page .app-content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+body.vert-app-page .app-page-hero,
+body.vert-app-page .page-hero,
+body.vert-app-page .pricing-hero,
+body.vert-app-page .product-landing-hero {
+  min-height: 197px !important;
+  align-items: center !important;
+  gap: 24px !important;
+  padding: 28px !important;
+  border-color: rgba(56, 189, 248, 0.18) !important;
+  background:
+    var(--vert-panel-gradient),
+    radial-gradient(680px 260px at 12% 0%, rgba(50, 230, 168, 0.16), transparent 65%),
+    rgba(12, 22, 32, 0.84) !important;
+}
+
+body.vert-app-page .app-page-hero > div:first-child {
+  min-width: 0;
+  max-width: 760px;
+}
+
+body.vert-app-page .app-page-hero .hero-title,
+body.vert-app-page .page-hero .hero-title,
+body.vert-app-page .pricing-hero .hero-title,
+body.vert-app-page .product-landing-hero .hero-title {
+  color: var(--vert-text) !important;
+  border-color: var(--vert-text) !important;
+  max-width: 760px !important;
+  font-size: 2rem !important;
+  line-height: 1.12 !important;
+}
+
+body.vert-app-page .hero-title {
+  color: var(--vert-text) !important;
+  border-color: var(--vert-text) !important;
+}
+
+body.vert-app-page .app-page-hero .lead,
+body.vert-app-page .page-hero .lead,
+body.vert-app-page .pricing-hero .lead,
+body.vert-app-page .product-landing-hero .lead {
+  max-width: 720px !important;
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+}
+
+body.vert-app-page .app-page-hero-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: min(436px, 100%);
+  justify-content: flex-end;
+  align-items: stretch;
+  gap: 10px;
+}
+
+body.vert-app-page .app-page-hero-actions .btn {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.vert-app-page .dashboard-stat-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+body.vert-app-page .surface,
+body.vert-app-page .app-panel,
+body.vert-app-page .dashboard-plan-card,
+body.vert-app-page .app-stat-card,
+body.vert-app-page .metric-card,
+body.vert-app-page .value-card,
+body.vert-app-page .account-section {
+  color: var(--vert-text) !important;
+  border: 1px solid var(--vert-border) !important;
+  border-radius: var(--vert-radius) !important;
+  background:
+    var(--vert-panel-gradient),
+    rgba(12, 22, 32, 0.86) !important;
+  box-shadow: var(--vert-shadow-soft) !important;
+}
+
+body.vert-app-page .app-panel {
+  padding: 24px !important;
+}
+
+body.vert-app-page .account-section {
+  min-height: 0 !important;
+  padding: 24px !important;
+  overflow: visible !important;
+}
+
+body.vert-app-page .dashboard-plan-card {
+  min-height: 150px !important;
+  display: grid !important;
+  grid-template-columns: minmax(260px, 1fr) minmax(320px, 0.95fr) auto !important;
+  align-items: center !important;
+  gap: 24px !important;
+  padding: 22px !important;
+}
+
+body.vert-app-page .dashboard-plan-main {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  min-width: 0 !important;
+}
+
+body.vert-app-page .dashboard-plan-main h2 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  line-height: 1.1 !important;
+}
+
+body.vert-app-page .dashboard-plan-main p {
+  margin: 6px 0 0 !important;
+  color: var(--vert-muted) !important;
+}
+
+body.vert-app-page .dashboard-plan-usage {
+  min-width: 0 !important;
+}
+
+body.vert-app-page .dashboard-plan-meter-head,
+body.vert-app-page .dashboard-plan-meta {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  color: var(--vert-muted-strong) !important;
+  font-size: 0.86rem !important;
+  font-weight: 820 !important;
+}
+
+body.vert-app-page .dashboard-plan-meter {
+  height: 8px !important;
+  margin: 8px 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+body.vert-app-page .dashboard-plan-meter span,
+body.vert-app-page .profile-completion-track em {
+  display: block !important;
+  height: 100% !important;
+  border-radius: inherit !important;
+  background: var(--vert-gradient) !important;
+}
+
+body.vert-app-page .dashboard-plan-actions {
+  display: grid !important;
+  gap: 10px !important;
+  min-width: 150px !important;
+}
+
+body.vert-app-page .dashboard-plan-actions .btn {
+  min-height: 42px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 900 !important;
+}
+
+body.vert-app-page .app-stat-card {
+  min-height: 127px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 22px !important;
+}
+
+body.vert-app-page .app-stat-icon,
+body.vert-app-page .dashboard-plan-icon {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  color: var(--vert-ink) !important;
+  background: var(--vert-gradient) !important;
+  box-shadow: 0 16px 30px rgba(50, 230, 168, 0.12) !important;
+}
+
+body.vert-app-page .app-stat-icon i,
+body.vert-app-page .dashboard-plan-icon i {
+  font-size: 0.98rem !important;
+  line-height: 1 !important;
+}
+
+body.vert-app-page .app-stat-label {
+  color: var(--vert-muted) !important;
+  font-size: 0.88rem !important;
+  font-weight: 850 !important;
+  line-height: 1.15 !important;
+}
+
+body.vert-app-page .app-stat-value {
+  color: #ffffff !important;
+  font-size: 2rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+body.vert-app-page .app-panel-header {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  margin-bottom: 18px !important;
+}
+
+body.vert-app-page .app-panel-header h2 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 1.35rem !important;
+  font-weight: 900 !important;
+  line-height: 1.18 !important;
+}
+
+body.vert-app-page .app-panel-header p,
+body.vert-app-page .app-panel p,
+body.vert-app-page .muted {
+  color: var(--vert-muted) !important;
+}
+
+body.vert-app-page .onboarding-steps,
+body.vert-app-page .product-flow-grid,
+body.vert-app-page .business-metric-grid,
+body.vert-app-page .business-insight-grid,
+body.vert-app-page .dashboard-work-grid,
+body.vert-app-page .dashboard-live-grid {
+  display: grid !important;
+  gap: 14px !important;
+}
+
+body.vert-app-page .onboarding-steps,
+body.vert-app-page .business-metric-grid,
+body.vert-app-page .product-flow-grid,
+body.vert-app-page .dashboard-work-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+body.vert-app-page .business-insight-grid,
+body.vert-app-page .dashboard-live-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+body.vert-app-page .onboarding-step,
+body.vert-app-page .path-mode-panel,
+body.vert-app-page .product-flow-grid article,
+body.vert-app-page .business-metric-grid article,
+body.vert-app-page .business-insight-grid article,
+body.vert-app-page .dashboard-work-grid article,
+body.vert-app-page .compact-activity-list article,
+body.vert-app-page .career-result-card {
+  color: var(--vert-text) !important;
+  border: 1px solid var(--vert-border) !important;
+  border-radius: var(--vert-radius) !important;
+  background: rgba(7, 16, 25, 0.62) !important;
+  box-shadow: none !important;
+}
+
+body.vert-app-page .onboarding-step,
+body.vert-app-page .product-flow-grid article,
+body.vert-app-page .business-metric-grid article,
+body.vert-app-page .business-insight-grid article,
+body.vert-app-page .dashboard-work-grid article {
+  padding: 18px !important;
+}
+
+body.vert-app-page .onboarding-step.complete,
+body.vert-app-page .business-next-action {
+  border-color: rgba(50, 230, 168, 0.24) !important;
+  background:
+    linear-gradient(135deg, rgba(50, 230, 168, 0.12), rgba(56, 189, 248, 0.07)),
+    rgba(7, 16, 25, 0.62) !important;
+}
+
+body.vert-app-page .product-flow-grid span,
+body.vert-app-page .business-metric-grid span,
+body.vert-app-page .dashboard-work-grid article > span:not(.app-stat-icon),
+body.vert-app-page .onboarding-step > i,
+body.vert-app-page .business-next-action > span {
+  width: 34px !important;
+  height: 34px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  border-radius: 8px !important;
+  color: var(--vert-accent) !important;
+  background: rgba(50, 230, 168, 0.10) !important;
+}
+
+body.vert-app-page .product-flow-grid span i,
+body.vert-app-page .business-metric-grid span i,
+body.vert-app-page .dashboard-work-grid article > span:not(.app-stat-icon) i,
+body.vert-app-page .onboarding-step > i,
+body.vert-app-page .business-next-action > span i,
+body.vert-app-page .btn i {
+  font-size: 0.9em !important;
+  line-height: 1 !important;
+}
+
+.auth-modal .modal-content {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+body.vert-public-page .auth-modal {
+  max-width: 920px !important;
+}
+
+body.vert-public-page .auth-shell {
+  min-height: 719px !important;
+}
+
+.auth-tabs .nav-link.active {
+  color: var(--vert-ink) !important;
+  background: var(--vert-gradient) !important;
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  body.vert-app-page .app-topbar,
+  body.vert-app-page .app-auth-header {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 76px !important;
+    align-items: stretch !important;
+    flex-direction: column !important;
+    padding: 16px 20px !important;
+    overflow: visible !important;
+  }
+
+  body.vert-app-page .app-workspace-context,
+  body.vert-app-page .app-workspace-identity,
+  body.vert-app-page .app-topbar-title {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  body.vert-app-page .app-topbar-actions,
+  body.vert-app-page .app-auth-actions,
+  body.vert-app-page .app-topbar-account {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+  }
+
+  body.vert-app-page .app-topbar-actions form,
+  body.vert-app-page .app-auth-actions form,
+  body.vert-app-page .app-topbar-account form {
+    min-width: 0 !important;
+  }
+
+  body.vert-app-page .app-plan-badge {
+    max-width: 100% !important;
+    flex: 1 1 280px !important;
+  }
+
+  body.vert-app-page .app-content {
+    max-width: 100% !important;
+    padding: 24px 20px !important;
+  }
+
+  body.vert-app-page .app-page-hero,
+  body.vert-app-page .page-hero,
+  body.vert-app-page .pricing-hero,
+  body.vert-app-page .product-landing-hero {
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  body.vert-app-page .app-page-hero > div:first-child,
+  body.vert-app-page .app-page-hero .hero-title,
+  body.vert-app-page .page-hero .hero-title,
+  body.vert-app-page .pricing-hero .hero-title,
+  body.vert-app-page .product-landing-hero .hero-title,
+  body.vert-app-page .app-page-hero .lead,
+  body.vert-app-page .page-hero .lead,
+  body.vert-app-page .pricing-hero .lead,
+  body.vert-app-page .product-landing-hero .lead {
+    max-width: 100% !important;
+  }
+
+  body.vert-app-page .app-page-hero-actions {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  body.vert-app-page .dashboard-plan-card {
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: stretch !important;
+    min-height: 0 !important;
+  }
+
+  body.vert-app-page .dashboard-plan-actions {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body.vert-app-page .dashboard-plan-actions .btn {
+    width: 100% !important;
+  }
+
+  body.vert-app-page .dashboard-stat-grid,
+  body.vert-app-page .onboarding-steps,
+  body.vert-app-page .business-metric-grid,
+  body.vert-app-page .product-flow-grid,
+  body.vert-app-page .business-insight-grid,
+  body.vert-app-page .dashboard-work-grid,
+  body.vert-app-page .dashboard-live-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body.vert-app-page .app-panel-header,
+  body.vert-app-page .path-mode-panel {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  body.vert-app-page .path-mode-actions {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .vert-public-header,
+  .public-site-header {
+    position: relative;
+  }
+
+  .vert-public-nav-inner,
+  .public-nav-container,
+  .public-nav-inner {
+    min-height: auto !important;
+    padding: 12px 18px !important;
+    gap: 14px !important;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    border: 1px solid var(--vert-border);
+    border-radius: var(--vert-radius);
+    background: rgba(7, 19, 31, 0.96);
+  }
+
+  .vert-public-nav-links,
+  .public-nav-links,
+  .navbar-nav.me-auto,
+  .auth-nav-actions {
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  .vert-public-nav .nav-link,
+  .alivert-nav .nav-link,
+  .Promovert-nav .nav-link,
+  .dealvert-nav .nav-link,
+  .workvert-nav .nav-link,
+  .auth-nav-actions .nav-cta,
+  .auth-nav-actions .nav-get-started {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex-basis: auto !important;
+    justify-content: center !important;
+  }
+
+  body.vert-public-page .auth-shell {
+    min-height: auto !important;
+  }
+
+  body.vert-public-page .hero-title {
+    font-size: 2.15rem !important;
+    line-height: 1.08 !important;
+  }
+
+  body.vert-public-page .lead {
+    font-size: 0.96rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .site-footer .container,
+  .footer .container {
+    padding: 28px 18px 20px !important;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+
+  .footer-brand-panel {
+    max-width: none !important;
+  }
+
+  .footer-nav-grid {
+    display: contents !important;
+    grid-template-columns: none !important;
+    padding: 0 !important;
+  }
+
+  body.vert-app-page .app-shell {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    overflow-x: hidden !important;
+  }
+
+  body.vert-app-page .app-sidebar {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    height: auto !important;
+    min-height: auto !important;
+    gap: 14px !important;
+    padding: 16px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--vert-border) !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  body.vert-app-page .app-sidebar > .app-brand,
+  body.vert-app-page .app-sidebar > .app-sidebar-brand,
+  body.vert-app-page .app-sidebar > .app-sidebar-cta,
+  body.vert-app-page .app-sidebar > .app-nav,
+  body.vert-app-page .app-sidebar > .app-menu-nav,
+  body.vert-app-page .app-sidebar > .app-sidebar-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  body.vert-app-page .app-sidebar-brand {
+    min-height: 52px !important;
+    padding: 0 !important;
+  }
+
+  body.vert-app-page .app-sidebar-cta,
+  body.vert-app-page .app-sidebar-quick-action,
+  body.vert-app-page .app-menu-cta {
+    min-height: 72px !important;
+  }
+
+  body.vert-app-page .app-nav,
+  body.vert-app-page .app-menu-nav {
+    width: 100% !important;
+  }
+
+  body.vert-app-page .app-nav-link,
+  body.vert-app-page .app-menu-link {
+    width: 100% !important;
+  }
+
+  body.vert-app-page .app-sidebar-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 6px !important;
+  }
+
+  body.vert-app-page .app-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  body.vert-app-page .app-topbar,
+  body.vert-app-page .app-auth-header {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    align-items: stretch !important;
+    flex-direction: column !important;
+    padding: 16px !important;
+    overflow: visible !important;
+  }
+
+  body.vert-app-page .app-workspace-context,
+  body.vert-app-page .app-workspace-identity,
+  body.vert-app-page .app-topbar-title {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  body.vert-app-page .app-topbar-actions,
+  body.vert-app-page .app-auth-actions,
+  body.vert-app-page .app-topbar-account,
+  body.vert-app-page .app-plan-badge,
+  body.vert-app-page .app-topbar-actions .btn,
+  body.vert-app-page .app-auth-actions .btn,
+  body.vert-app-page .app-topbar-account .btn,
+  body.vert-app-page .app-topbar-actions form,
+  body.vert-app-page .app-auth-actions form,
+  body.vert-app-page .app-topbar-account form {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  body.vert-app-page .app-topbar-actions,
+  body.vert-app-page .app-auth-actions,
+  body.vert-app-page .app-topbar-account {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    gap: 10px !important;
+  }
+
+  body.vert-app-page .app-plan-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-wrap: wrap !important;
+    white-space: normal !important;
+  }
+
+  body.vert-app-page .app-upgrade-action,
+  body.vert-app-page .app-topbar-button {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  body.vert-app-page .app-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 18px 14px 28px !important;
+    overflow-x: hidden !important;
+  }
+
+  body.vert-app-page .app-page-hero,
+  body.vert-app-page .page-hero,
+  body.vert-app-page .pricing-hero,
+  body.vert-app-page .product-landing-hero {
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 18px !important;
+    padding: 22px !important;
+  }
+
+  body.vert-app-page .app-page-hero > div:first-child,
+  body.vert-app-page .app-page-hero .hero-title,
+  body.vert-app-page .page-hero .hero-title,
+  body.vert-app-page .pricing-hero .hero-title,
+  body.vert-app-page .product-landing-hero .hero-title,
+  body.vert-app-page .app-page-hero .lead,
+  body.vert-app-page .page-hero .lead,
+  body.vert-app-page .pricing-hero .lead,
+  body.vert-app-page .product-landing-hero .lead {
+    max-width: 100% !important;
+  }
+
+  body.vert-app-page .app-page-hero-actions {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  body.vert-app-page .dashboard-plan-card {
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+    gap: 18px !important;
+  }
+
+  body.vert-app-page .dashboard-plan-actions {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  body.vert-app-page .dashboard-stat-grid,
+  body.vert-app-page .onboarding-steps,
+  body.vert-app-page .business-metric-grid,
+  body.vert-app-page .product-flow-grid,
+  body.vert-app-page .business-insight-grid,
+  body.vert-app-page .dashboard-work-grid,
+  body.vert-app-page .dashboard-live-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.vert-app-page .app-panel-header,
+  body.vert-app-page .path-mode-panel {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  body.vert-app-page .path-mode-actions {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  body.vert-app-page .path-mode-actions .btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+  }
+
+  .vert-public-nav .brand-mark,
+  .public-workspace-nav .brand-mark,
+  .public-site-header .brand-mark {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  .vert-public-nav .brand-mark img,
+  .public-workspace-nav .brand-mark img,
+  .public-site-header .brand-mark img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+  }
+
+  body.vert-public-page .hero-title {
+    font-size: 1.78rem !important;
+    line-height: 1.08 !important;
+  }
+
+  body.vert-public-page .surface,
+  body.vert-public-page .plan,
+  body.vert-public-page .value-card,
+  body.vert-public-page .news-card,
+  body.vert-public-page .step-card,
+  body.vert-public-page .auth-form-panel,
+  body.vert-public-page .auth-aside {
+    padding: 20px !important;
+  }
+
+  body.vert-app-page .app-sidebar {
+    padding: 14px !important;
+  }
+
+  body.vert-app-page .app-sidebar-cta,
+  body.vert-app-page .app-sidebar-quick-action,
+  body.vert-app-page .app-menu-cta {
+    align-items: center !important;
+    padding: 12px !important;
+  }
+
+  body.vert-app-page .app-sidebar-cta-icon,
+  body.vert-app-page .app-sidebar-quick-icon,
+  body.vert-app-page .app-menu-cta-icon,
+  body.vert-app-page .app-sidebar-cta-main > i {
+    width: 42px !important;
+    height: 42px !important;
+    flex-basis: 42px !important;
+  }
+
+  body.vert-app-page .app-nav-section,
+  body.vert-app-page .app-menu-section {
+    margin: 12px 4px 4px !important;
+  }
+
+  body.vert-app-page .app-topbar,
+  body.vert-app-page .app-auth-header {
+    padding: 14px !important;
+  }
+
+  body.vert-app-page .app-content {
+    padding: 14px 10px 24px !important;
+  }
+
+  body.vert-app-page .app-page-hero,
+  body.vert-app-page .page-hero,
+  body.vert-app-page .pricing-hero,
+  body.vert-app-page .product-landing-hero,
+  body.vert-app-page .surface,
+  body.vert-app-page .app-panel,
+  body.vert-app-page .dashboard-plan-card,
+  body.vert-app-page .app-stat-card,
+  body.vert-app-page .metric-card,
+  body.vert-app-page .value-card,
+  body.vert-app-page .account-section {
+    border-radius: 12px !important;
+  }
+
+  body.vert-app-page .app-page-hero,
+  body.vert-app-page .app-panel,
+  body.vert-app-page .dashboard-plan-card {
+    padding: 18px !important;
+  }
+
+  body.vert-app-page .app-page-hero .hero-title,
+  body.vert-app-page .page-hero .hero-title,
+  body.vert-app-page .pricing-hero .hero-title,
+  body.vert-app-page .product-landing-hero .hero-title {
+    font-size: 1.7rem !important;
+    line-height: 1.12 !important;
+  }
+
+  body.vert-app-page .app-stat-card {
+    min-height: 96px !important;
+    padding: 18px !important;
+  }
+
+  body.vert-public-page .container {
+    padding-right: 14px !important;
+    padding-left: 14px !important;
+  }
+
+  body.vert-public-page .page-hero,
+  body.vert-public-page .pricing-hero,
+  body.vert-public-page .promo-strip,
+  body.vert-public-page .conversion-band {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+
+  body.vert-public-page .hero-kicker {
+    max-width: 100% !important;
+    white-space: normal !important;
+    justify-content: flex-start !important;
+    line-height: 1.2 !important;
+  }
+
+  .site-footer,
+  .footer {
+    margin-top: 28px !important;
+  }
+
+  .site-footer .container,
+  .footer .container {
+    padding: 24px 14px 18px !important;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr !important;
+  }
+
+  .footer-brand-panel,
+  .footer-nav-grid > div {
+    min-height: 0 !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .footer-nav-grid {
+    display: contents !important;
+    grid-template-columns: none !important;
+    gap: 14px !important;
+  }
+
+  .footer-nav-grid > div {
+    gap: 4px !important;
+  }
+
+  .footer-link {
+    width: 100% !important;
+    min-height: 34px !important;
+    justify-content: space-between !important;
+    padding: 6px 8px !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    margin-top: 18px !important;
+    padding-top: 14px !important;
+  }
+
+  .footer-bottom span:last-child {
+    text-align: left !important;
+  }
+
+  body.vert-public-page .hero-actions,
+  body.vert-public-page .conversion-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  body.vert-public-page .hero-actions .btn,
+  body.vert-public-page .conversion-actions .btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+  }
+
+  body.vert-app-page .settings-timezone-copy {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  body.vert-app-page .settings-timezone-icon {
+    width: 42px !important;
+    height: 42px !important;
+    flex-basis: 42px !important;
+  }
+
+  body.vert-app-page .settings-timezone-actions .btn {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .vert-public-nav-inner,
+  .public-nav-container,
+  .public-nav-inner {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+    gap: 12px !important;
+  }
+
+  .navbar-collapse {
+    gap: 8px !important;
+  }
+
+  .vert-public-nav-links,
+  .public-nav-links,
+  .navbar-nav.me-auto {
+    gap: 4px !important;
+  }
+
+  .vert-public-nav .nav-link,
+  .alivert-nav .nav-link,
+  .Promovert-nav .nav-link,
+  .dealvert-nav .nav-link,
+  .workvert-nav .nav-link {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .auth-nav-actions {
+    gap: 6px !important;
+  }
+
+  .auth-nav-actions.is-authenticated .auth-user-link,
+  .auth-nav-actions.is-authenticated .public-user-link {
+    max-width: 112px !important;
+  }
+
+  .auth-nav-actions.is-authenticated .nav-workspace-cta,
+  .auth-nav-actions.is-authenticated .public-open-workspace {
+    max-width: 126px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .auth-nav-actions.is-authenticated .nav-cta {
+    min-height: 40px !important;
+    padding-right: 9px !important;
+    padding-left: 9px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  body.vert-public-page .page-hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.vert-public-page .page-hero-grid > *,
+  body.vert-public-page .proof-panel {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  body.vert-public-page .promo-strip,
+  body.vert-public-page .conversion-band {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  body.vert-public-page .conversion-actions {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body.vert-public-page .conversion-actions .btn {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+body.vert-app-page .account-profile-main,
+body.vert-app-page .account-profile-main > *,
+body.vert-app-page .account-profile-summary,
+body.vert-app-page .account-profile-summary > *,
+body.vert-app-page .account-row,
+body.vert-app-page .account-row > *,
+body.vert-app-page .notification-channel-actions,
+body.vert-app-page .settings-page .notification-channel-actions,
+body.vert-app-page .settings-timezone-tools {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+body.vert-app-page .account-profile-main h1,
+body.vert-app-page .account-profile-main h2,
+body.vert-app-page .account-profile-main p,
+body.vert-app-page .account-profile-summary h1,
+body.vert-app-page .account-profile-summary h2,
+body.vert-app-page .account-profile-summary p,
+body.vert-app-page .account-row,
+body.vert-app-page .account-row span,
+body.vert-app-page .account-row strong {
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+
+@media (max-width: 575.98px) {
+  body.vert-app-page .notification-channel-actions,
+  body.vert-app-page .settings-page .notification-channel-actions,
+  body.vert-app-page .settings-timezone-tools {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  body.vert-app-page .notification-channel-actions .btn,
+  body.vert-app-page .settings-page .notification-channel-actions .btn,
+  body.vert-app-page .notification-test-button,
+  body.vert-app-page .account-section > .btn,
+  body.vert-app-page .account-section .btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+}
